@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Tic Tac Toe</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="justify">tic tac toe</header>
+    <div id="select-page" class='page-1'>
+        <div id="title" class="title justify">Choose Your Game Mode</div>
+        <div id="main" class="column justify center">
+            <div class="card justify" onclick="setMode(0)">
+                <div>1 Player</div>
+            </div>
+            <h1>OR</h1>
+            <div class="card justify" onclick="setMode(1)">
+                <div>2 Player</div>
+            </div>
+        </div>
+    </div>
+    <div id="game-page" class="page-2">
+        <div class="scoreboard justify">
+            <div class="score">
+                <div id="player-1" class="name left">YOU</div>
+                <div id="player-1-score" class="player">0</div>
+            </div>
+            <h1>:</h1>
+            <div class="score">
+                <div id="player-2" class="name right">COMP</div>
+                <div id="player-2-score" class="player">0</div>
+            </div>
+        </div>
+        <div id="grid" class="container center">
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+            <cell class="cell-common justify" onclick="set(this)"></cell>
+        </div>
+        <div class="button-container justify center">
+            <button onclick="resetBtn()">Reset</button>
+            <button onclick="changeMode()">Change Mode</button>
+        </div>
+        <div id="winning-overlay" class="winning-overlay">
+            <div class="column center justify">
+                <h1 id="winning-msg">You Win 🎉</h1>
+                <button onclick="initialize()">Restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>

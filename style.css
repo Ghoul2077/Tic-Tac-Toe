@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Gothic+A1&family=Lora&family=Open+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.justify {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+a,
+a:active,
+button,
+button:active {
+    outline: none;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+}
+
+body {
+    font-family: "Fira Sans", sans-serif;
+    overflow: hidden;
+    background: #2c3e50;
+    color: white;
+}
+
+body>header {
+    text-transform: uppercase;
+    font-size: 2em;
+    padding: 20px;
+    background: #ecf0f1;
+    color: black;
+    font-weight: 500;
+}
+
+/* CSS For page control */
+
+.page-1 {
+    display: block;
+}
+
+.page-2 {
+    display: none;
+}
+
+.title {
+    font-family: "Gothic A1", sans-serif;
+    font-size: 20px;
+    margin: 30px auto;
+    padding: 50px;
+}
+
+.card {
+    width: 300px;
+    height: 100px;
+    font-size: 3em;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    background: black;
+    font-size: 3.1em;
+}
+
+#main {
+    top: 60%;
+}
+
+#main h1 {
+    margin: 30px;
+}
+
+
+/* CSS For Scoreboard */
+
+.scoreboard {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border: 3px solid white;
+    border-radius: 8px;
+    margin: 30px auto;
+}
+
+.name {
+    position: absolute;
+    background: #e74c3c;
+    padding: 3px 8px;
+    border-radius: 3px;
+}
+
+.left {
+    left: -5%;
+}
+
+.right {
+    right: -5%;
+}
+
+.player {
+    font-size: 3em;
+}
+
+/* CSS For Main Game */
+
+.circle {
+    background: red;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.cross {
+    background: blue;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.container {
+    top: 60%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    transition: 0.5s;
+}
+
+.cell-common {
+    background: white;
+    border: 2px solid white;
+    width: 90px;
+    height: 95px;
+    font-size: 5em;
+}
+
+.cell-common:hover {
+    opacity: 0.7;
+    color: #2f3640;
+    cursor: pointer;
+}
+
+/* CSS for Button Area */
+
+.button-container {
+    top: 93%;
+    gap: 2em;
+}
+
+button {
+    background: #a29bfe;
+    color: black;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    width: 130px;
+    height: 50px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+
+/* CSS for winning overlay */
+
+.winning-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    overflow: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.85;
+    background: black;
+    z-index: 2;
+}
+
+.winning-overlay>div {
+    gap: 2em;
+}
+
+#winning-msg{
+	font-size: 1.3em;
+}
+
+/* CSS for Mobiles */
+
+@media screen and (min-width:600px) {
+    #main {
+        flex-direction: row;
+    }
+
+    .title {
+        font-size: 2.5em;
+    }
+
+    .container {
+        gap: 2rem;
+    }
+
+    .cell-common {
+        width: 100px;
+        height: 100px;
+    }
+
+    .button-container {
+        gap: 3.5em;
+    }
+
+    #winning-msg{
+		font-size: 2em;
+	}
+}
